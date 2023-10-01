@@ -16,18 +16,18 @@ import { CustomInput } from "./components/Inputs";
 import { useState } from "react";
 import { sections } from "./utils/registerText";
   
-export default function Register() {
+export default function Register({ navigation}) {
     const [numSections, setNumSections] = useState(1);
 
     function handleNextSection() {
         if (numSections < sections.length - 1) {
-        setNumSections(numSections + 1);
+            setNumSections(numSections + 1);
         }
     }
 
     function handleReturnSection() {
         if (numSections > 0) {
-        setNumSections(numSections - 1);
+            setNumSections(numSections - 1);
         }
     }
 
@@ -86,7 +86,7 @@ export default function Register() {
         >
             Avançar
         </Button>
-        <Link alignSelf={"center"} mt={2} href="https://www.google.com">
+        <Link alignSelf={"center"} mt={2} onPress={() => navigation.navigate('Login')}>
             Já possui conta?
         </Link>
         </ScrollView>
