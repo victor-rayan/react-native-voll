@@ -13,7 +13,7 @@ export default function Login({ navigation}) {
         <CustomInput placeholder="Digite seu email">Email</CustomInput>
         <CustomInput placeholder="Digite sua senha">Senha</CustomInput>
       </Box>
-      <Button w="100%" bg="blue.800" mt={10} borderRadius="lg">
+      <Button onPress={() => navigation.navigate('Tabs')} w="100%" bg="blue.800" mt={10} borderRadius="lg">
         Entrar
       </Button>
       <Link mt={2} href="https://www.google.com">
